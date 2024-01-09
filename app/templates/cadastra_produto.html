@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<body class="text-center">
+    <div class="container">
+        <h1 class="h3 mb-3 font-weight-normal">Cadastro de Produtos</h1>
+   
+
+        <p style="text-align: center;"></p>
+        <form class="form-register" style="color:whitesmoke"  method="post">
+        
+            {{ form.hidden_tag() }}
+            
+                {{ form.name.label }}
+                {{ form.name(class='form-control', placeholder='Informe o nome do produto') }}
+           
+                {{ form.price.label }}
+                {{ form.price(class='form-control', placeholder='Informe o valor do produto') }}
+            
+                {{ form.description.label }}
+                {{ form.description(class='form-control', placeholder='Informe a Descrição do produto') }}
+                
+                <br>
+                <div class="d-grid">
+                    {{ form.submit(class='btn btn-lg btn-success') }}
+                </div>
+
+               
+        </form>
+    </div>
+</body>
+
+{% endblock %}

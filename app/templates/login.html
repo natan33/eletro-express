@@ -1,0 +1,39 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+
+
+<body class="text-center">
+    <div class="container">
+        <img class='mb-4' src="https://cdn-icons-png.flaticon.com/512/5087/5087579.png" style="width: 200px;">
+        <h1 class="h3 mb-3 font-weight-normal">Sign In</h1>
+
+        <form  method="POST" class="form-signin" style="color:whitesmoke"  novalidate>
+            {{ form.hidden_tag() }}
+            
+                {{ form.username.label() }}
+                {{ form.username(class='form-control', placeholder='Informe seu nome') }}
+           
+                {{ form.password.label() }}
+                {{ form.password(class='form-control', placeholder='Informe sua senha') }}
+           
+                {{ form.remember.label() }} {{ form.remember() }}
+       
+                <br>
+                <div class="d-grid">
+                    {{ form.submit(class='btn btn-lg btn-success') }}
+                </div>
+        </form>
+    </div>
+    <br>
+    
+    <p>    
+        Não tem uma conta?<a href="{{url_for('page_cadastro')}}">Cadastre-se</a>
+    
+        </a></p>
+    </div>
+</body>
+
+{% endblock %}
