@@ -1,2 +1,0 @@
-FLASK_APP=ecommerce.py
-SECRET_KEY="9dd3cd3d378fbfddf99ee4dccb93fe9a5c2e68e7"

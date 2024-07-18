@@ -1,3 +1,5 @@
-venv/
-migrations/
-.flaskenv
+*venv
+*.env
+*__pycache__
+*.gitignore
+*app.db
